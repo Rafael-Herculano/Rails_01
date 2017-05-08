@@ -11,7 +11,7 @@ Repositório referente a aplicação Thainan e Thauany Confecções.
 
 ## **Ruby on Rails** ##
 
-Primeiro de tudo, baixe o [Ruby on Rails](http://www.maujor.com/railsgirlsguide/install.php#installation_sur_windows) para Windows.
+Primeiro de tudo, baixe o [Ruby on Rails](http://www.railsinstaller.org/pt-BR) **versão 2.2** para Windows.
 
 ### **Clonando o Projeto** ###
 
