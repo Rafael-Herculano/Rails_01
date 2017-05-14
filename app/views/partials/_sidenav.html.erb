@@ -3,12 +3,11 @@
 
   <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
-
       <div class="navbar nav_title" style="border: 0;">
-        <a href="#" class="site_title">
+        <%= link_to root_path, class: 'site_title' do %>
           <%= image_tag "logo_cortado.png", :class => "img-responsive logo"  %>
           <span class="title-logo">Thainan e Thauany<br>confecções</span>
-        </a>
+        <% end %>
       </div>
       <div class="clearfix"></div>
 
@@ -52,7 +51,7 @@
         <a data-toggle="tooltip" data-placement="top" title="Configurações">
           <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="Tela Cheia">
+        <a data-toggle="tooltip" id="tela_cheia" data-placement="top" title="Tela Cheia">
           <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
         </a>
         <a data-toggle="tooltip" data-placement="top" title="Bloquear">

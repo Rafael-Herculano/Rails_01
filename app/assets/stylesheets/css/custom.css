@@ -709,7 +709,7 @@ footer {
   padding: 15px 20px;
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 990px) {
   footer {
     margin-left: 230px;
   }
