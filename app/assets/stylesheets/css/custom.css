@@ -39,7 +39,7 @@
 }
 .nav-sm .nav.child_menu li.active,
 .nav-sm .nav.side-menu li.active-sm {
-  border-right: 5px solid #32586B;
+  border-right: 5px solid #2a6496;
 }
 .nav-sm ul.nav.child_menu ul,
 .nav-sm .nav.side-menu li.active-sm ul ul {
@@ -116,7 +116,7 @@
 .profile_info span {
   font-size: 13px;
   line-height: 30px;
-  color: #32586B;
+  color: #2a6496;
 }
 .profile_info h2 {
   font-size: 14px;
@@ -561,7 +561,7 @@ a:hover, a:focus {
   padding: 13px 15px 12px;
 }
 .nav.side-menu> li.current-page, .nav.side-menu> li.active {
-  border-right: 5px solid #32586B;
+  border-right: 5px solid #2a6496;
 }
 .nav li.current-page {
   background: rgba(255, 255, 255, 0.05);
@@ -603,6 +603,7 @@ a:hover, a:focus {
 }
 .nav-md .site_title, .nav-md .nav_title {
   height: 120px;
+  margin-bottom: 10px;
 }
 .nav-md .site_title .logo {
   width: 30%;
