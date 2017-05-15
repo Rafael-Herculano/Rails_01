@@ -40,13 +40,18 @@
             <li><a><i class="fa fa-tasks"></i> Serviços <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu" style="display: none">
                 <li><%= link_to 'Todos os Serviços', servicos_path %></li>
-                <% $servicos_all.each do |servico| %>
-                  <li><a href="#"><%= servico.nome %></a></li>
-                <% end %>
+                <%
+                  if @servicos.present?
+                    @servicos.each do |servico| 
+                %>
+                      <li><a href="#"><%= servico.nome %></a></li>
+                    <% end 
+                  end %>
                 <li><%= link_to '+ Adicionar Serviço', new_servico_path %></li>
               </ul>
             </li>
             <li><a><i class="fa fa-exchange"></i> Caixa </a></li>
+            <li><a><i class="fa fa-users" aria-hidden="true"></i> Funcionários </a></li>
           </ul>
         </div>
       </div>

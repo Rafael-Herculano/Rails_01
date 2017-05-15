@@ -13,12 +13,11 @@
 
 <body class="nav-md">
   <div class="container body">
+    <%= render "partials/sidenav", locals: {servicos: @servicos} %>
+    <%= render "partials/topnav" %>
     <% flash.each do |key, value| %>
       <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
-
-    <%= render "partials/sidenav" %>
-    <%= render "partials/topnav" %>
 
     <%= yield %>
 

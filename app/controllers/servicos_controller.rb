@@ -42,7 +42,8 @@ class ServicosController < ApplicationController
   def update
     respond_to do |format|
       if @servico.update(servico_params)
-        format.html { redirect_to servicos_path, notice: 'Serviço atualizado com sucesso!' }
+        format.html { redirect_to servicos_path}
+        flash[:success ] = 'Serviço atualizado com sucesso!'
         format.json { render :show, status: :ok, location: @servico}
       else
         format.html { render :edit }
