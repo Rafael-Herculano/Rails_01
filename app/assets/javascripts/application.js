@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap-modal
+//= require bootstrap-modalmanager
+//= require data-confirm-modal
 
 //= require jquery_ujs
 //= require turbolinks

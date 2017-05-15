@@ -49,5 +49,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap-modal-rails'
+gem 'data-confirm-modal'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'

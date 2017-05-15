@@ -1,0 +1,78 @@
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <p id="notice"><%= notice %></p>
+      <div class="title_left">
+        <h1>Serviços</h1>
+      </div>
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pesquisar...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i>
+</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="container">
+      <%
+        $servicos_all = @servicos
+        @servicos.each do |servico|
+      %>
+        <div class="col-md-4 col-sm-6">
+          <div class="container servico">
+            <div class="col-md-12 titulo">
+              <%= link_to servico do %>
+                <h1><%= $nome_servico = servico.nome %></h1>
+              <% end %>
+            </div>
+            <div class="col-md-6 editar">
+              <%= link_to edit_servico_path(servico) do %>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              <% end %>
+            </div>
+            <div class="col-md-6 excluir">
+              <%= link_to servico, method: :delete, data: { confirm: 'Deseja excluir?' } do%>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="container servico">
+          <div class="col-md-12 titulo">
+            <%= link_to new_servico_path do %>
+              <h1><i class="fa fa-plus-square" aria-hidden="true"></i><br>Adicionar Serviço</h1>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<%# Bootstrap modal markup. @see: http://getbootstrap.com/javascript/#modals %>
+<div class="modal fade" id="novoServico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Novo Serviço</h4>
+      </div>
+      <div class="modal-body">
+        <%# Render the new person form (passing modal => true to enable remote => true) %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

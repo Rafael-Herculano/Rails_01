@@ -32,12 +32,18 @@
         <div class="menu_section">
           <h3>Administrador</h3>
           <ul class="nav side-menu">
-            <li><a><i class="fa fa fa-bar-chart-o"></i> Dashboard</a></li>
+            <li><a><i class="fa fa fa-bar-chart-o"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
+              <ul class="nav child_menu" style="display: none">
+                <li><%= link_to 'Visão Geral',root_path %></li>
+              </ul>
+            </li>
             <li><a><i class="fa fa-tasks"></i> Serviços <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu" style="display: none">
-                <li><a href="#">Corte e Costura</a></li>
-                <li><a href="#">Acabamento</a></li>
-                <li><a href="#">+ Adicionar Serviço</a></li>
+                <li><%= link_to 'Todos os Serviços', servicos_path %></li>
+                <% $servicos_all.each do |servico| %>
+                  <li><a href="#"><%= servico.nome %></a></li>
+                <% end %>
+                <li><%= link_to '+ Adicionar Serviço', new_servico_path %></li>
               </ul>
             </li>
             <li><a><i class="fa fa-exchange"></i> Caixa </a></li>
