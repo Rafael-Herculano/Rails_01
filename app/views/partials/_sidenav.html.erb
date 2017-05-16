@@ -40,9 +40,10 @@
             <li><a><i class="fa fa-tasks"></i> Serviços <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu" style="display: none">
                 <li><%= link_to 'Todos os Serviços', servicos_path %></li>
-                <%
-                  if @servicos.present?
-                    @servicos.each do |servico| 
+                <% 
+                  servicos = Servico.all
+                  if servicos.present?
+                    servicos.each do |servico| 
                 %>
                       <li><a href="#"><%= servico.nome %></a></li>
                     <% end 
