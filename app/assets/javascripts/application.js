@@ -41,6 +41,3 @@
 //= require js/pace/pace.min.js
 
 //= require flash.js
-
-
-
