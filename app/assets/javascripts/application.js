@@ -15,6 +15,7 @@
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
 //= require data-confirm-modal
+//= require jquery.validate
 
 //= require jquery_ujs
 //= require turbolinks

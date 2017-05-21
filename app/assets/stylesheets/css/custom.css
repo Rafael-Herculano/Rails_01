@@ -1,3 +1,19 @@
+/* ::::::::::::::: Mensagens de erro ::::::::::::::::::: */
+
+label#servico_nome-error {
+  font-size: 16px;
+  color: red;
+  display: block;
+  margin-top: 10px;
+}
+
+input.error {
+  border: 1px solid red;
+  background-color: #ffc0c0;
+}
+
+/* ::::::::::::::: Mensagens de erro ::::::::::::::::::: */
+
 .turbolinks-progress-bar {
   background: #3A3A3C !important;
 }
@@ -33,6 +49,9 @@
 .nav-sm .navbar.nav_title a i {
   font-size: 27px;
   margin: 13px 0 0 3px;
+}
+.main_container {
+  background-color: #A3DFFE;
 }
 .nav-sm .main_container .top_nav {
   display: block;
@@ -325,9 +344,8 @@ body .container.body .right_col {
 }
 body {
   color: #3A3A3C;
-  background: #A3DFFE;
-  /*#ECF0F1; #FCFCFC*/
-  font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+  background: #F7F7F7;
+  font-family: 'Roboto', sans-serif, Droid Sans, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.471;
@@ -991,361 +1009,6 @@ legend {
 /* *********  /custom accordion  **************************** */
 
 
-/* *********  dashboard widget  **************************** */
-
-table.tile h3, table.tile h4, table.tile span {
-  font-weight: bold;
-  vertical-align: middle !important;
-}
-table.tile th, table.tile td {
-  text-align: center;
-}
-table.tile th {
-  border-bottom: 1px solid #E6ECEE;
-}
-table.tile td {
-  padding: 5px 0;
-}
-table.tile td ul {
-  text-align: left;
-  padding-left: 0
-}
-table.tile td ul li {
-  list-style: none;
-  width: 100%;
-}
-table.tile td ul li a {
-  width: 100%
-}
-table.tile td ul li a big {
-  right: 0;
-  float: right;
-  margin-right: 13px;
-}
-table.tile_info {
-  width: 100%;
-}
-table.tile_info td {
-  text-align: left;
-  padding: 1px;
-  font-size: 15px
-}
-table.tile_info td p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  line-height: 28px;
-}
-table.tile_info td i {
-  margin-right: 8px;
-  font-size: 17px;
-  float: left;
-  width: 18px;
-  line-height: 28px
-}
-table.tile_info td:first-child {
-  width: 83%;
-}
-td span {
-  line-height: 28px;
-}
-.sidebar-widget {
-  overflow: hidden;
-}
-.error-number {
-  font-size: 90px;
-  line-height: 90px;
-  margin: 20px 0;
-}
-.col-middle {
-  margin-top: 5%;
-}
-.mid_center {
-  width: 370px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px 20px;
-}
-h3.degrees {
-  font-size: 22px;
-  font-weight: 400;
-  text-align: center;
-}
-.degrees:after {
-  content: "o";
-  position: relative;
-  top: -12px;
-  font-size: 13px;
-  font-weight: 300;
-}
-.daily-weather .day {
-  font-size: 14px;
-  border-top: 2px solid rgba(115, 135, 156, 0.36);
-  text-align: center;
-  border-bottom: 2px solid rgba(115, 135, 156, 0.36);
-  padding: 5px 0;
-}
-.weather-days .col-sm-2 {
-  overflow: hidden;
-  width: 16.66666667%;
-}
-.weather .row {
-  margin-bottom: 0
-}
-
-/* *********  tables styling  ******************************* */
-
-.bulk-actions {
-  display: none;
-}
-table.countries_list {
-  width: 100%;
-}
-table.countries_list td {
-  padding: 0 10px;
-  line-height: 30px;
-  border-top: 1px solid #eeeeee;
-}
-.dataTables_paginate a {
-  padding: 6px 9px !important;
-  background: #ddd !important;
-  border-color: #ddd !important;
-}
-.paging_full_numbers a.paginate_active {
-  background-color: rgba(38, 185, 154, 0.59) !important;
-  border-color: rgba(38, 185, 154, 0.59) !important;
-}
-button.DTTT_button, div.DTTT_button, a.DTTT_button {
-  border: 1px solid #E7E7E7 !important;
-  background: #E7E7E7 !important;
-  box-shadow: none !important;
-}
-table.jambo_table {
-  border: 1px solid rgba(221, 221, 221, 0.78);
-}
-table.jambo_table thead {
-  background: rgba(52, 73, 94, 0.94);
-  color: #ECF0F1;
-}
-table.jambo_table tbody tr:hover td {
-  background: rgba(38, 185, 154, 0.07);
-  border-top: 1px solid rgba(38, 185, 154, 0.11);
-  border-bottom: 1px solid rgba(38, 185, 154, 0.11);
-}
-table.jambo_table tbody tr.selected {
-  background: rgba(38, 185, 154, 0.16);
-}
-table.jambo_table tbody tr.selected td {
-  border-top: 1px solid rgba(38, 185, 154, 0.40);
-  border-bottom: 1px solid rgba(38, 185, 154, 0.40);
-}
-.dataTables_paginate a {
-  background: #ff0000;
-}
-.dataTables_wrapper {
-  position: relative;
-  clear: both;
-  zoom: 1;
-  /* Feeling sorry for IE */
-}
-.dataTables_processing {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 250px;
-  height: 30px;
-  margin-left: -125px;
-  margin-top: -15px;
-  padding: 14px 0 2px 0;
-  border: 1px solid #ddd;
-  text-align: center;
-  color: #999;
-  font-size: 14px;
-  background-color: white;
-}
-.dataTables_length {
-  width: 40%;
-  float: left;
-}
-.dataTables_filter {
-  width: 50%;
-  float: right;
-  text-align: right;
-}
-.dataTables_info {
-  width: 60%;
-  float: left;
-}
-.dataTables_paginate {
-  float: right;
-  text-align: right;
-}
-table.dataTable th.focus,
-table.dataTable td.focus {
-    outline: 2px solid #1ABB9C !important;
-    outline-offset: -1px;
-}
-
-/* Pagination nested */
-
-.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
-  height: 19px;
-  float: left;
-  cursor: pointer;
-  *cursor: hand;
-  color: #111 !important;
-}
-.paginate_disabled_previous:hover, .paginate_enabled_previous:hover, .paginate_disabled_next:hover, .paginate_enabled_next:hover {
-  text-decoration: none !important;
-}
-.paginate_disabled_previous:active, .paginate_enabled_previous:active, .paginate_disabled_next:active, .paginate_enabled_next:active {
-  outline: none;
-}
-.paginate_disabled_previous, .paginate_disabled_next {
-  color: #666 !important;
-}
-.paginate_disabled_previous, .paginate_enabled_previous {
-  padding-left: 23px;
-}
-.paginate_disabled_next, .paginate_enabled_next {
-  padding-right: 23px;
-  margin-left: 10px;
-}
-.paginate_disabled_previous {
-  background: url('../images/back_disabled.png') no-repeat top left;
-}
-.paginate_enabled_previous {
-  background: url('../images/back_enabled.png') no-repeat top left;
-}
-.paginate_enabled_previous:hover {
-  background: url('../images/back_enabled_hover.png') no-repeat top left;
-}
-.paginate_disabled_next {
-  background: url('../images/forward_disabled.png') no-repeat top right;
-}
-.paginate_enabled_next {
-  background: url('../images/forward_enabled.png') no-repeat top right;
-}
-.paginate_enabled_next:hover {
-  background: url('../images/forward_enabled_hover.png') no-repeat top right;
-}
-table.display {
-  margin: 0 auto;
-  clear: both;
-  width: 100%;
-}
-table.display thead th {
-  padding: 8px 18px 8px 10px;
-  border-bottom: 1px solid black;
-  font-weight: bold;
-  cursor: pointer;
-  cursor: hand;
-}
-table.display tfoot th {
-  padding: 3px 18px 3px 10px;
-  border-top: 1px solid black;
-  font-weight: bold;
-}
-table.display tr.heading2 td {
-  border-bottom: 1px solid #aaa;
-}
-table.display td {
-  padding: 3px 10px;
-}
-table.display td.center {
-  text-align: center;
-}
-table.display thead th:active, table.display thead td:active {
-  outline: none;
-}
-.dataTables_scroll {
-  clear: both;
-}
-.dataTables_scrollBody {
-  *margin-top: -1px;
-  -webkit-overflow-scrolling: touch;
-}
-.top, .bottom {}
-.top .dataTables_info {
-  float: none;
-}
-.clear {
-  clear: both;
-}
-.dataTables_empty {
-  text-align: center;
-}
-tfoot input {
-  margin: 0.5em 0;
-  width: 100%;
-  color: #444;
-}
-tfoot input.search_init {
-  color: #999;
-}
-td.group {
-  background-color: #d1cfd0;
-  border-bottom: 2px solid #A19B9E;
-  border-top: 2px solid #A19B9E;
-}
-td.details {
-  background-color: #d1cfd0;
-  border: 2px solid #A19B9E;
-}
-.example_alt_pagination div.dataTables_info {
-  width: 40%;
-}
-.paging_full_numbers {
-  width: 400px;
-  height: 22px;
-  line-height: 22px;
-}
-.paging_full_numbers a:active {
-  outline: none
-}
-.paging_full_numbers a:hover {
-  text-decoration: none;
-}
-.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active {
-  border: 1px solid #aaa;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  padding: 2px 5px;
-  margin: 0 3px;
-  cursor: pointer;
-  *cursor: hand;
-}
-.paging_full_numbers a.paginate_button {
-  background-color: #ddd;
-}
-.paging_full_numbers a.paginate_button:hover {
-  background-color: #ccc;
-  text-decoration: none !important;
-}
-.paging_full_numbers a.paginate_active {
-  background-color: #99B3FF;
-}
-table.display tr.even.row_selected td {
-  background-color: #B0BED9;
-}
-table.display tr.odd.row_selected td {
-  background-color: #9FAFD1;
-}
-div.box {
-  height: 100px;
-  padding: 10px;
-  overflow: auto;
-  border: 1px solid #8080FF;
-  background-color: #E5E5FF;
-}
-
-/* *********  /tables styleing  ****************************** */
-
-
-/* *********  /dashboard widget  **************************** */
-
-
 /* *********  widgets  *************************************** */
 
 ul.msg_list li {
@@ -1839,139 +1502,6 @@ table.tile_info span.right {
 }
 
 /* *********  /Tile stats  **************************** */
-
-
-/* *********  /inbox design  **************************** */
-
-a.star {
-  color: #428bca !important
-}
-.mail_content {
-  background: none repeat scroll 0 0 #FFFFFF;
-  border-radius: 4px;
-  margin-top: 20px;
-  min-height: 500px;
-  padding: 10px 11px;
-  width: 100%;
-}
-.list-btn-mail {
-  margin-bottom: 15px;
-}
-.list-btn-mail.active {
-  border-bottom: 1px solid #39B3D7;
-  padding: 0 0 14px;
-}
-.list-btn-mail > i {
-  float: left;
-  font-size: 18px;
-  font-style: normal;
-  width: 33px;
-}
-.list-btn-mail > .cn {
-  background: none repeat scroll 0 0 #39B3D7;
-  border-radius: 12px;
-  color: #FFFFFF;
-  float: right;
-  font-style: normal;
-  padding: 0 5px;
-}
-.button-mail {
-  margin: 0 0 15px !important;
-  text-align: left;
-  width: 100%;
-}
-.buttons, button, .btn {
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-.btn-group-vertical .btn, .btn-group .btn {
-  margin-bottom: 0;
-  margin-right: 0;
-}
-.mail_list_column {
-  border-left: 1px solid #DBDBDB;
-}
-.mail_view {
-  border-left: 1px solid #DBDBDB
-}
-.mail_list {
-  width: 100%;
-  border-bottom: 1px solid #DBDBDB;
-  margin-bottom: 2px;
-  display: inline-block;
-}
-.mail_list .left {
-  width: 5%;
-  float: left;
-  margin-right: 3%
-}
-.mail_list .right {
-  width: 90%;
-  float: left
-}
-.mail_list h3 {
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0px 0 6px;
-}
-.mail_list h3 small {
-  float: right;
-  color: #ADABAB;
-  font-size: 11px;
-  line-height: 20px;
-}
-.mail_list .badge {
-  padding: 3px 6px;
-  font-size: 8px;
-  background: #BAB7B7
-}
-@media (max-width: 767px) {
-  .mail_list {
-    margin-bottom: 5px;
-    display: inline-block;
-  }
-}
-.mail_heading h4 {
-  font-size: 18px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-top: 20px;
-}
-.attachment {
-  margin-top: 30px;
-}
-.attachment ul {
-  width: 100%;
-  list-style: none;
-  padding-left: 0;
-  display: inline-block;
-  margin-bottom: 30px;
-}
-.attachment ul li {
-  float: left;
-  width: 150px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.attachment ul li img {
-  height: 150px;
-  border: 1px solid #ddd;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-.attachment ul li span {
-  float: right;
-}
-.attachment .file-name {
-  float: left;
-}
-.attachment .links {
-  width: 100%;
-  display: inline-block;
-}
-
-/* *********  /inbox design   **************************** */
-
 
 /* *********  form design  **************************** */
 
@@ -3059,12 +2589,6 @@ ul.social li {
 }
 
 /* *********  /timeline  **************************** */
-
-
-/* *********  easypie  **************************** */
-
-
-/* *********  /easypie  **************************** */
 
 
 /* *********  form wizard  **************************** */
@@ -4386,98 +3910,6 @@ ul.project_files li a i {
 /* *********  /image cropping  **************************** */
 
 
-/* *********  moris  **************************** */
-
-.morris-hover {
-  position: absolute;
-  z-index: 1000;
-}
-.morris-hover.morris-default-style {
-  padding: 6px;
-  color: #666;
-  background: rgba(243, 242, 243, 0.8);
-  border: solid 2px rgba(195, 194, 196, 0.8);
-  font-family: sans-serif;
-  font-size: 12px;
-  text-align: center;
-}
-.morris-hover.morris-default-style .morris-hover-row-label {
-  font-weight: bold;
-  margin: 0.25em 0;
-}
-.morris-hover.morris-default-style .morris-hover-point {
-  white-space: nowrap;
-  margin: 0.1em 0;
-}
-
-/* *********  /moris  **************************** */
-
-
-/* *********  ecommerce  **************************** */
-
-.price {
-  font-size: 40px;
-  font-weight: 400;
-  color: #26B99A;
-  margin: 0;
-}
-.prod_title {
-  border-bottom: 1px solid #DFDFDF;
-  padding-bottom: 5px;
-  margin: 30px 0;
-  font-size: 20px;
-  font-weight: 400;
-}
-.product-image img {
-  width: 90%;
-}
-.prod_color li {
-  margin: 0 10px;
-}
-.prod_color li p {
-  margin-bottom: 0;
-}
-.prod_size li {
-  padding: 0;
-}
-.prod_color .color {
-  width: 25px;
-  height: 25px;
-  border: 2px solid rgba(51, 51, 51, 0.28) !important;
-  padding: 2px;
-  border-radius: 50px;
-}
-.product_gallery a {
-  width: 100px;
-  height: 100px;
-  float: left;
-  margin: 10px;
-  border: 1px solid #e5e5e5;
-}
-.product_gallery a img {
-  width: 100%;
-  margin-top: 15px;
-}
-.product_price {
-  margin: 20px 0;
-  padding: 5px 10px;
-  background-color: #FFFFFF;
-  text-align: left;
-  border: 2px dashed #E0E0E0;
-}
-.price-tax {
-  font-size: 18px;
-}
-.product_social {
-  margin: 20px 0;
-}
-.product_social ul li a i {
-  font-size: 35px;
-}
-
-/* *********  /ecommerce  **************************** */
-
-
 /* *********  progressbar  **************************** */
 
 
@@ -4684,83 +4116,6 @@ ul.verticle_bars li {
 }
 
 /* *********  /progressbar  **************************** */
-
-
-/********* login ****************/
-
-a.hiddenanchor {
-  display: none;
-}
-
-/** The wrapper that will contain our two forms **/
-
-#wrapper {
-  right: 0px;
-  margin: 0px auto;
-  margin-top: 5%;
-  max-width: 350px;
-  position: relative;
-}
-#register, #login {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-}
-#register {
-  z-index: 21;
-  opacity: 0;
-  width: 100%;
-}
-#login {
-  z-index: 22;
-}
-#toregister:target ~ #wrapper #register, #tologin:target ~ #wrapper #login {
-  z-index: 22;
-  -webkit-animation-name: fadeInLeft;
-  -moz-animation-name: fadeInLeft;
-  -ms-animation-name: fadeInLeft;
-  -o-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
-  -o-animation-delay: .1s;
-  -ms-animation-delay: .1s;
-  animation-delay: .1s;
-}
-#toregister:target ~ #wrapper #login, #tologin:target ~ #wrapper #register {
-  -webkit-animation-name: fadeOutLeft;
-  -moz-animation-name: fadeOutLeft;
-  -ms-animation-name: fadeOutLeft;
-  -o-animation-name: fadeOutLeft;
-  animation-name: fadeOutLeft;
-}
-
-/** the actual animation, credit where due : http://daneden.me/animate/ ***/
-
-.animate {
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-duration: 0.5s;
-  -moz-animation-timing-function: ease;
-  -moz-animation-fill-mode: both;
-  -o-animation-duration: 0.5s;
-  -o-animation-timing-function: ease;
-  -o-animation-fill-mode: both;
-  -ms-animation-duration: 0.5s;
-  -ms-animation-timing-function: ease;
-  -ms-animation-fill-mode: both;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: both;
-}
-
-/* *********  cropping  **************************** */
-
-
-/* Main
- * ========================================================================== */
-
 
 /* Icons
  * -------------------------------------------------------------------------- */
@@ -4998,27 +4353,6 @@ body {
 }
 
 /* *********  /cropping  **************************** */
-
-
-/* *********    **************************** */
-
-
-/* *********    **************************** */
-
-
-/* *********    **************************** */
-
-
-/* *********    **************************** */
-
-
-/* *********    **************************** */
-
-
-/* *********    **************************** */
-
-
-/* *********    **************************** */
 
 
 /* *********    **************************** */

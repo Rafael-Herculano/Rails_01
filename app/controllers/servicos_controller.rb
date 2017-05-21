@@ -28,7 +28,8 @@ class ServicosController < ApplicationController
 
     respond_to do |format|
       if @servico.save
-        format.html { redirect_to servicos_path, notice: 'Serviço criado com sucesso!' }
+        format.html { redirect_to servicos_path}
+        flash[:success ] = 'Serviço criado com sucesso!'
         format.json { render :show, status: :created, location: @servico }
       else
         format.html { render :new }
@@ -57,7 +58,8 @@ class ServicosController < ApplicationController
   def destroy
     @servico.destroy
     respond_to do |format|
-      format.html { redirect_to servicos_url, notice: 'Serviço excluido com sucesso!.' }
+      format.html { redirect_to servicos_url}
+      flash[:success ] = 'Serviço excluido com sucesso!'
       format.json { head :no_content }
     end
   end
