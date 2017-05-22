@@ -25,7 +25,6 @@ class TarefasController < ApplicationController
   # POST /tarefas.json
   def create
     @tarefa = Tarefa.new(tarefa_params)
-    debugger
     respond_to do |format|
       if @tarefa.save
         format.html { redirect_to servico_path(tarefa_params[:servico_id])}
