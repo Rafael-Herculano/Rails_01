@@ -1,0 +1,95 @@
+<div class="container conteudo form-tarefa">
+  <%= form_for(tarefa) do |f| %>
+    <% if tarefa.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(tarefa.errors.count, "error") %> prohibited this tarefa from being saved:</h2>
+
+        <ul>
+        <% tarefa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <div class="col-xs-8">
+        <%= f.label :nome, class: 'control-label obrigatorio' %>
+        <%= f.text_field :nome, class: 'form-control'  %>
+      </div>
+      <div class="col-xs-4">
+        <%= f.label :quantidade, class: 'control-label obrigatorio' %>
+        <%= f.number_field :quantidade, class: 'form-control' %>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-4 col-xs-12 preco">
+        <%= f.label :preco, 'Preço', class: 'control-label obrigatorio' %>
+        <%= f.number_field :preco, class: 'form-control', :value => number_with_precision(tarefa.preco, precision: 2) %>
+      </div>
+      <div class="col-sm-4 col-xs-6">
+        <%= f.label :deposito, 'Depósito', class: 'control-label obrigatorio' %>
+        <%= f.number_field :deposito, class: 'form-control', :value => number_with_precision(tarefa.preco, precision: 2) %>
+      </div>
+      <div class="col-sm-4 col-xs-6">
+        <%= f.label :entrega, 'Data de Entrega', class: 'control-label obrigatorio' %>
+        <%= f.date_field :entrega, class: 'form-control' %>
+      </div>
+      <div class="clearfix"></div>
+      <br><span class="obrigatorio pull-left" style="margin-left: 10px;">Campos obrigatórios</span>
+    </div>
+    <div class="col-sm-12">
+      <%= f.hidden_field(:servico_id, :value => params[:s]) %>
+    </div>
+    <div class="col-xs-12 text-center">
+      <%= f.submit "Salvar", class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Voltar', servico_path(params[:s]), class: 'btn btn-primary btn-lg' %>
+    </div>
+  <% end %>
+</div>
+<script>
+  $("#new_tarefa").validate({});
+  $(".edit_tarefa").validate({});
+  $('#tarefa_nome').each(function() {
+    $(this).rules('add', {
+      required: true,
+      minlength: 3,
+      messages: {
+        required:"Preencha o nome da tarefa",
+        minlength:"O nome deve ter pelo menos 3 caracteres"
+      }
+    });
+  });
+  $('#tarefa_quantidade').each(function() {
+    $(this).rules('add', {
+      required: true,
+      messages: {
+        required:"Preencha a quantidade",
+      }
+    });
+  });
+  $('#tarefa_preco').each(function() {
+    $(this).rules('add', {
+      required: true,
+      messages: {
+        required:"Preencha o preço",
+      }
+    });
+  });
+  $('#tarefa_deposito').each(function() {
+    $(this).rules('add', {
+      required: true,
+      messages: {
+        required:"Preencha o depósito",
+      }
+    });
+  });
+  $('#tarefa_entrega').each(function() {
+    $(this).rules('add', {
+      required: true,
+      messages: {
+        required:"Preencha a data de entrega",
+      }
+    });
+  });
+</script>

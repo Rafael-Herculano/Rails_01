@@ -1,6 +1,11 @@
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #D2D2D2;
+}
+
 /* ::::::::::::::: Mensagens de erro ::::::::::::::::::: */
 
-label#servico_nome-error {
+label.error {
   font-size: 16px;
   color: red;
   display: block;
@@ -10,6 +15,12 @@ label#servico_nome-error {
 input.error {
   border: 1px solid red;
   background-color: #ffc0c0;
+}
+
+.obrigatorio::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
 }
 
 /* ::::::::::::::: Mensagens de erro ::::::::::::::::::: */

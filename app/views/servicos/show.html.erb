@@ -1,9 +1,73 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nome:</strong>
-  <%= @servico.nome %>
-</p>
-
-<%= link_to 'Edit', edit_servico_path(@servico) %> |
-<%= link_to 'Back', servicos_path %>
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h1><%= @servico.nome %></h1>
+      </div>
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pesquisar...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container conteudo">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="table-responsive">
+            <% if @servico.tarefa.present? %>
+              <table id="tabelaTarefas" class="table table-striped text-center">
+                <thead class="cabecalho-tabela">
+                  <th>ID</th>
+                  <th>Tarefa</th>
+                  <th>Quantidade</th>
+                  <th>Preço</th>
+                  <th>Deposito</th>
+                  <th>Data cadastro</th>
+                  <th>Data entrega</th>
+                  <th>Ações</th>
+                </thead>
+                <tbody>
+                  <% @servico.tarefa.each do |tarefa| %>
+                    <tr>
+                      <td><%= tarefa.id %></td>
+                      <td><%= tarefa.nome %></td>
+                      <td><%= tarefa.quantidade %></td>
+                      <td><%= "#{number_to_currency(tarefa.preco, unit: "R$", separator: ",", delimiter: ".")}" %></td>
+                      <td><%= "#{number_to_currency(tarefa.deposito, unit: "R$", separator: ",", delimiter: ".")}" %></td>
+                      <td><%= tarefa.created_at.strftime('%d/%m/%Y') %></td>
+                      <td><%= tarefa.entrega.strftime('%d/%m/%Y') %></td>
+                      <td>
+                        <button data-toggle="tooltip" data-placement="top" title="" data-original-title="Editar" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" >
+                          <%= link_to edit_tarefa_path(tarefa, :s => @servico.id) do %>
+                            <span class="glyphicon glyphicon-pencil"></span>
+                          <% end %>
+                        </button>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <button data-toggle="tooltip" data-placement="top" title="" data-original-title="Excluir" class="btn-acao btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                          <%= link_to tarefa, method: :delete, data: { confirm: 'Deseja realmente excluir?' } do %>
+                            <span class="glyphicon glyphicon-trash"></span>
+                          <% end %>
+                        </button
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            <% else %>
+              <div class="row">
+                <h1 class="text-center">Não existem tarefas para este serviço</h1>
+              </div>
+            <% end %>
+            <span style="margin-right: 15px;"><%= link_to '+ Adicionar Tarefa', new_tarefa_path(:s => @servico.id), class: "btn btn-primary pull-right" %></span>
+            <div class="clearfix"></div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
