@@ -5,7 +5,7 @@ html, body {
 	font-family: 'Varela Round';
 }
 
-.float { float:left; } 
+.float { float:left; }
 
 .full-page, .content-image {
   width: 100%;
@@ -18,13 +18,13 @@ html, body {
   height: 100%;
 }
 
-.text-center {
+.text-center-login {
   width: 400px;
   height: 100%;
   margin:  0 auto;
 }
 
-.text-center .conteudo {
+.text-center .conteudo-login {
   margin-left: -40px;
 }
 
@@ -42,16 +42,16 @@ html, body {
 
 .tela-login {
   position:relative;
-  width:500px;    
+  width:500px;
   height:100%;
   overflow:auto;
   margin-left:-500px;
-  margin-right:0px; 
+  margin-right:0px;
 }
 
-.conteudo {
+.conteudo-login {
   position: relative;
-  top: 17vh;  
+  top: 17vh;
 }
 
 /*=== 2. Anchor Link ===*/
@@ -326,7 +326,7 @@ label:hover:before {
 .logo img {
   width: 50%;
   margin: 0 auto;
-} 
+}
 
 @media only screen and (max-width: 600px) {
   html, body {
