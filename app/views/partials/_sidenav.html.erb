@@ -57,9 +57,8 @@
         <a data-toggle="tooltip" data-placement="top" title="Bloquear">
           <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="Sair">
-          <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-        </a>
+        <%= link_to "" , destroy_user_session_path, method: :delete , data: {confirm:"tem certeza que deseja sair?"} , class:"glyphicon glyphicon-off"  %>
+        
       </div>
       <!-- /menu footer buttons -->
     </div>

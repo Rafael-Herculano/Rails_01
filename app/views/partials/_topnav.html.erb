@@ -13,11 +13,16 @@
             <%= image_tag "user.jpeg" %>Kermit Muppet
             <span class=" fa fa-angle-down"></span>
           </a>
-          <ul class="dropdown-menu dropdown-usermenu pull-right">
+          <ul cols="2" class="dropdown-menu dropdown-usermenu pull-right">
             <li><a href="javascript:;">  Perfil</a>
             </li>
             <li><a href="javascript:;">  Configurações</a></li>
-            <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Sair</a>
+            
+            <li>
+            <%= link_to "sair" , destroy_user_session_path, method: :delete , data: {confirm:"tem certeza que deseja sair?"}%>
+            
+
+            </li>
             </li>
           </ul>
         </li>
