@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap-modal
+//= require bootstrap-modalmanager
+//= require data-confirm-modal
+//= require jquery.validate
 
 //= require jquery_ujs
-//= require turbolinks
 
 //= require js/flot/jquery.flot.js
 //= require js/flot/jquery.flot.pie.js
@@ -37,9 +40,4 @@
 
 //= require js/pace/pace.min.js
 
-//= require  js/nprogress.js
-
 //= require flash.js
-
-
-

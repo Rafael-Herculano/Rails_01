@@ -3,40 +3,33 @@
 <head>
   <title><%= content_for?(:title) ? yield(:title) : "Thainan e Thauany confecções" %> </title>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
 
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <% if user_signed_in?%>
-<body class="nav-md">
-  <div class="container body">
+  <body class="nav-md">
+    <div class="container body">
 
-    <% flash.each do |key, value| %>
-      <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
+      <%= render "partials/sidenav" %>
+      <%= render "partials/topnav" %>
+      <% flash.each do |key, value| %>
+        <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
 
-    
-    <%= render "partials/sidenav" %>
-    <%= render "partials/topnav" %>
-    
+      <%= yield %>
 
-    <%= yield %>
-
-    <% if user_signed_in?%>
-    <%= render "partials/footer" %>
-    <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>
-    <%end%>
-
-
-  </div>
-
-</body>
+      <%= render "partials/footer" %>
+      <%= javascript_include_tag 'footermanifest' %>
+    </div>
+  </body>
 <%else%>
-<body style="background-color: #FFFFFF ">
-  <%= yield %>
-</body>
+  <body style="background-color: #FFFFFF ">
+    <%= yield %>
+  </body>
 <% end %>
 </html>

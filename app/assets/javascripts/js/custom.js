@@ -352,18 +352,6 @@ $(function () {
 		});
 });
 
-
-// NProgress
-if (typeof NProgress != 'undefined') {
-		$(document).ready(function () {
-				NProgress.start();
-		});
-
-		$(window).load(function () {
-				NProgress.done();
-		});
-}
-
 /**
  * Resize function without multiple trigger
  *

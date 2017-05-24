@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users
+
+  resources :tarefas
+  resources :servicos
+
   get 'dashboard/index'
   root 'dashboard#index'
 

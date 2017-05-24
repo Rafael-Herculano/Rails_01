@@ -1,0 +1,44 @@
+<%= form_for(servico) do |f| %>
+  <% if servico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(servico.errors.count, "erro(s)") %> ao salvar este serviço</h2>
+
+      <ul>
+      <% servico.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+    <div class="container servico">
+      <div class="col-xs-12 titulo">
+        <div class="field">
+          <%= f.label :nome %><br>
+          <%= f.text_field :nome, :required => true %>
+        </div>
+      </div>
+      <div class="row"></div>
+      <div class="col-xs-6 salvar-servico">
+        <%= f.submit "Salvar", class: 'salvar' %>
+      </div>
+      <div class="col-xs-6 edicao">
+        <%= link_to 'Voltar', servicos_path, class: 'voltar' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<script>
+  $("#new_servico").validate({});
+  $(".edit_servico").validate({});
+  $('#servico_nome').each(function() {
+    $(this).rules('add', {
+      required: true,
+      minlength: 3,
+      messages: {
+        required:"Preencha o nome do serviço",
+        minlength:"O nome deve ter pelo menos 3 caracteres"
+      }
+    });
+  });
+</script>

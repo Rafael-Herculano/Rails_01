@@ -5,6 +5,74 @@
         <h1>Dashboard</h1>
         
       </div>
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pesquisar...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="container conteudo">
+      <h2>Resumo mensal de caixa</h2>
+      <canvas id="resumoCaixa" class=""></canvas>
     </div>
   </div>
 </div>
+
+<script>
+var ctx = document.getElementById('resumoCaixa').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+    datasets: [{
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: "rgba(163, 223, 254,0.4)",
+      borderColor: "rgba(163, 223, 254,1)",
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: 'miter',
+      pointBorderColor: "rgba(163, 223, 254,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(163, 223, 254,1)",
+      pointHoverBorderColor: "rgba(163, 223, 254,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      spanGaps: false,
+      label: 'Lucros',
+      data: [1300, 1400, 1600, 1500, 1800, 1900, 2100, 1800, 1900, 2400, 2200, 2200],
+    }, {
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: "rgba(58, 58, 60,0.4)",
+      borderColor: "rgba(58, 58, 60,1)",
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: 'miter',
+      pointBorderColor: "rgba(58, 58, 60,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(58, 58, 60,1)",
+      pointHoverBorderColor: "rgba(58, 58, 60,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      spanGaps: false,
+      label: 'Despesas',
+      data: [1400, 1300, 1500, 2000, 2000, 1500, 1300, 1800, 1700, 1600, 2000, 1700],
+    }]
+  }
+});
+</script>
